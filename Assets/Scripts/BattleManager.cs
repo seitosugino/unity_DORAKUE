@@ -33,12 +33,10 @@ public struct BattleContext
     public Battler enemy;
     public WindowBattleMenuCommand windowBattleMenuCommand;
     public WindowBattleMenuCommand windowBattleSpellCommand;
-
-    public BattleContext(Battler player, Battler enemy, WindowBattleMenuCommand windowBattleMenuCommand, WindowBattleMenuCommand windowBattleSpellCommand)
+    public WindowBattleMenuCommand windowBattleItemCommand;
+    public void SetEnemy()
     {
-        this.player = player;
-        this.enemy = enemy;
-        this.windowBattleMenuCommand = windowBattleMenuCommand;
-        this.windowBattleSpellCommand = windowBattleSpellCommand;
+        player.enemy = enemy;
+        enemy.enemy = player;
     }
 }

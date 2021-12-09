@@ -8,7 +8,26 @@ public class WindowBattleMenuCommand : MonoBehaviour
     [SerializeField] Transform arrow = default;
     [SerializeField] List<SelectableText> selectableTexts = new List<SelectableText>();
 
+    [SerializeField] SelectableText SelectableTextPrefab = default;
+
     public int currentID;
+
+    public void CreateSelectableText(string[] commands)
+    {
+        arrow.SetParent(transform);
+        foreach (SelectableText selectableText in selectableTexts)
+        {
+            Destroy(selectableText.gameObject);
+        }
+        selectableTexts.Clear();
+        foreach (string command in commands)
+        {
+            Debug.Log(command);
+            SelectableText text = Instantiate(SelectableTextPrefab, transform);
+            text.SetText(command);
+            selectableTexts.Add(text);
+        }
+    }
 
     void SetMoveArrowFunction()
     {

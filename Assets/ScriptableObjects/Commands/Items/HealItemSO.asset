@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ecb71597b884b8eaa6b7be8db46ff3, type: 3}
-  m_Name: AttackCommandSO
+  m_Script: {fileID: 11500000, guid: c49c2360e3315457ea3b93a3fb03b6c4, type: 3}
+  m_Name: HealItemSO
   m_EditorClassIdentifier: 
-  name: "\u653B\u6483"
-  targetType: 1
-  at: 4
+  name: "\u85AC\u8349"
+  targetType: 0
+  healPoint: 20

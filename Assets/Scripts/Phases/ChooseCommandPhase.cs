@@ -20,6 +20,10 @@ public class ChooseCommandPhase : PhaseBase
         {
             next = new ChooseSpellCommandPhase();
         }
+        else if (currentID == 3)
+        {
+            next = new ChooseItemCommandPhase();
+        }
         else
         {
             next = new ChooseCommandPhase();

@@ -7,6 +7,14 @@ public class CommandSO : ScriptableObject
 {
     public new string name;
 
+    public enum TargetType
+    {
+        Self,
+        Enemy,
+    }
+
+    public TargetType targetType;
+
     public virtual void Execute(Battler user ,Battler target)
     {
         // target.hp -= at;
